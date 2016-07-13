@@ -24,11 +24,23 @@
     NSString* logFilePath = [documentsDirectory stringByAppendingPathComponent:fileName];//拼接成路径
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);//设置nslog的输出路径为文件而不是控制台
 }
-
+-(void)A{
+    
+}
+-(void)B{
+    [self A];
+}
+-(void)C{
+   [self B];
+}
+-(void)D{
+    [self C];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self redirectNSLogToDocumentFolder];//在程序载入的时候设置log输出
+    [self D];
     return YES;
 }
 
