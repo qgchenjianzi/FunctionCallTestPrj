@@ -13,6 +13,7 @@
 
 
 #import "ViewController.h"
+#import "sample.h"
 
 @interface ViewController ()
 
